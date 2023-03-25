@@ -8,6 +8,17 @@ output: pdf_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+Instrucciones: Elaborar informe de análisis financiero:
+Incluir:
+- Análisis estático comparativo (últimos dos balances de cierre).
+- Análisis de liquidez (ratios)
+- Ratios financieros en genreral.
+- Ratios económicos (margen, rendimiento, rentabilidad).
+- Introducción.
+- Marco conceptual.
+- Análisis.
+- Conclusiones.
+
 ```{r}
 
 
