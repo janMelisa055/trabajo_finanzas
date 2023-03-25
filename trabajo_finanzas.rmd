@@ -64,6 +64,19 @@ format(capital_trabajo_neto_2022, big.mark = " ",
 nsmall = 2, scientific = FALSE), " M."))
 ```
 
+liquidez
+
+```{r}
+
+liquidez_2022 <- as.numeric(balance[1, 2]) / as.numeric(balance[21, 2])
+liquidez_2021 <- as.numeric(balance[1, 3]) / as.numeric(balance[21, 3])
+
+cat(paste0("La liquidez del año 2021 fue de ", format(liquidez_2021*100, big.mark = " ",
+nsmall = 2, scientific = FALSE), " %, mientras que"), "\n", 
+paste0(" en el año 2022 fue de ", format(liquidez_2022*100, big.mark = " ",
+nsmall = 2, scientific = FALSE)), " %.")
+```
+
 
 
 Relativo porcentual
