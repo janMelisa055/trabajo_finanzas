@@ -1,6 +1,6 @@
 ---
 title: "Trabajo Finanzas I"
-author: "Melissa, Lucas, Amanda"
+author: "Melissa, Lucas, Amanda, Exequiel"
 output: pdf_document
 ---
 
