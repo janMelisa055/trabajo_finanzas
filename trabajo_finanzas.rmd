@@ -10,19 +10,19 @@ knitr::opts_chunk$set(echo = FALSE)
 setwd("C:/Users/oienh/Documents/R_UNIVERSITY_PROJECTS/5th_Semester/trabajo_finanzas")
 ```
 
-# Instrucciones: Elaborar informe de análisis financiero:
-# Incluir:
-# - Análisis estático comparativo (últimos dos balances de cierre).
-# - Análisis de liquidez (ratios).
-# - Ratios financieros en genreral.
-# - Ratios económicos (margen, rendimiento, rentabilidad).
-# - Introducción.
-# - Marco conceptual.
-# - Análisis.
-# - Conclusiones.
+## Instrucciones: Elaborar informe de análisis financiero:
+## Incluir:
+## - Análisis estático comparativo (últimos dos balances de cierre).
+## - Análisis de liquidez (ratios).
+## - Ratios financieros en genreral.
+## - Ratios económicos (margen, rendimiento, rentabilidad).
+## - Introducción.
+## - Marco conceptual.
+## - Análisis.
+## - Conclusiones.
 
-## Empresa escogida: Amazon
-\
+# Empresa escogida: Amazon
+
 ```{r}
 library(readxl)
 
@@ -36,7 +36,7 @@ balance <- balance[-1, ]
 
 
 
-## Capital trabajo neto
+# Capital trabajo neto
 
 ```{r}
 
@@ -53,7 +53,7 @@ nsmall = 2, scientific = FALSE), " M."))
 
 ```
 
-## liquidez
+# liquidez
 
 ```{r}
 
