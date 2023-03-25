@@ -7,12 +7,13 @@ output: pdf_document
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+setwd("C:/Users/oienh/Documents/R_UNIVERSITY_PROJECTS/5th_Semester/trabajo_finanzas")
 ```
 
 Instrucciones: Elaborar informe de análisis financiero:
 Incluir:
 - Análisis estático comparativo (últimos dos balances de cierre).
-- Análisis de liquidez (ratios)
+- Análisis de liquidez (ratios).
 - Ratios financieros en genreral.
 - Ratios económicos (margen, rendimiento, rentabilidad).
 - Introducción.
@@ -20,9 +21,15 @@ Incluir:
 - Análisis.
 - Conclusiones.
 
-```{r}
+Empresa escogida: Amazon
 
-balance <- "el archivo"
+```{r}
+library(readxl)
+
+estado_de_resultado <- read_excel("estado_de_resultados.xlsx",  range = "A1:C35")
+balance <- read_excel("balance.xlsx",  range = "A1:C35")
+
+
 
 total <- "la suma de todo lol"
 
