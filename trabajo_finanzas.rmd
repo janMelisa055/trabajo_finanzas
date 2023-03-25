@@ -6,7 +6,7 @@ output: pdf_document
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(echo = FALSE)
 setwd("C:/Users/oienh/Documents/R_UNIVERSITY_PROJECTS/5th_Semester/trabajo_finanzas")
 ```
 
@@ -62,6 +62,7 @@ nsmall = 2, scientific = FALSE),
 paste0("mientras que en 2022 fue de USD ",
 format(capital_trabajo_neto_2022, big.mark = " ",
 nsmall = 2, scientific = FALSE), " M."))
+
 ```
 
 liquidez
@@ -75,9 +76,10 @@ cat(paste0("La liquidez del año 2021 fue de ", format(liquidez_2021*100, big.ma
 nsmall = 2, scientific = FALSE), " %, mientras que"), "\n", 
 paste0(" en el año 2022 fue de ", format(liquidez_2022*100, big.mark = " ",
 nsmall = 2, scientific = FALSE)), " %.")
+
 ```
 
-
+Cosas que pueden ser útiles:
 
 Relativo porcentual
 
