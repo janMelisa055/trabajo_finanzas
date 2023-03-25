@@ -21,8 +21,8 @@ setwd("C:/Users/oienh/Documents/R_UNIVERSITY_PROJECTS/5th_Semester/trabajo_finan
 # - Análisis.
 # - Conclusiones.
 
-Empresa escogida: Amazon
-
+## Empresa escogida: Amazon
+\
 ```{r}
 library(readxl)
 
@@ -36,7 +36,7 @@ balance <- balance[-1, ]
 
 
 
-Capital trabajo neto
+## Capital trabajo neto
 
 ```{r}
 
@@ -53,7 +53,7 @@ nsmall = 2, scientific = FALSE), " M."))
 
 ```
 
-liquidez
+## liquidez
 
 ```{r}
 
