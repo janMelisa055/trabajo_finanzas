@@ -10,16 +10,16 @@ knitr::opts_chunk$set(echo = FALSE)
 setwd("C:/Users/oienh/Documents/R_UNIVERSITY_PROJECTS/5th_Semester/trabajo_finanzas")
 ```
 
-Instrucciones: Elaborar informe de análisis financiero:
-Incluir:
-- Análisis estático comparativo (últimos dos balances de cierre).
-- Análisis de liquidez (ratios).
-- Ratios financieros en genreral.
-- Ratios económicos (margen, rendimiento, rentabilidad).
-- Introducción.
-- Marco conceptual.
-- Análisis.
-- Conclusiones.
+# Instrucciones: Elaborar informe de análisis financiero:
+# Incluir:
+# - Análisis estático comparativo (últimos dos balances de cierre).
+# - Análisis de liquidez (ratios).
+# - Ratios financieros en genreral.
+# - Ratios económicos (margen, rendimiento, rentabilidad).
+# - Introducción.
+# - Marco conceptual.
+# - Análisis.
+# - Conclusiones.
 
 Empresa escogida: Amazon
 
@@ -33,19 +33,7 @@ balance <- balance[-1, ]
 ```
 
 
-# efectivo y equivalente
-# cuentas por cobrar
-# inventarios
-# activo fijo
-# otros activos largo plazo
-# total
 
-# banco corto plazo
-# proveedores
-# banco largo plazo
-# capital
-# resultado acumulado
-# total
 
 
 Capital trabajo neto
@@ -76,12 +64,24 @@ cat(paste0("La liquidez del año 2021 fue de ", format(liquidez_2021*100, big.ma
 nsmall = 2, scientific = FALSE), " %, mientras que"), "\n", 
 paste0(" en el año 2022 fue de ", format(liquidez_2022*100, big.mark = " ",
 nsmall = 2, scientific = FALSE)), " %.")
-
 ```
 
 Cosas que pueden ser útiles:
 
 Relativo porcentual
+
+efectivo y equivalente
+cuentas por cobrar
+inventarios
+activo fijo
+otros activos largo plazo
+total
+banco corto plazo
+proveedores
+banco largo plazo
+capital
+resultado acumulado
+total
 
 
 total <- "la suma de todo lol"
