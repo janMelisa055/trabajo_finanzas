@@ -1,6 +1,7 @@
 ---
 title: "Trabajo Finanzas I"
 author: "Melissa, Lucas, Amanda, Exequiel"
+date: "2023-03-30"
 output: pdf_document
 ---
 
@@ -20,6 +21,22 @@ Incluir:
 - Conclusiones.
 
 ```{r}
+
+balance <- "el archivo"
+
+total <- "la suma de todo lol"
+
+relativo_porcentual <- apply("", function(x) x / total)
+
+activo_corriente <- sum()
+pasivo_corriente <- sum()
+
+capital_trabajo_neto <- activo_corriente - pasivo_corriente
+liquidez <- activo_corriente / pasivo_corriente
+prueba_acida <- (activo_corriente - inventarios) / pasivo_corriente
+liquidez_inmediata <- efectivo y equivalente / pasivo_corriente
+solvencia <- pasivos / patrimonio
+endeudamiento <- (pasivos - patrimonio) / patrimonio
 
 
 
