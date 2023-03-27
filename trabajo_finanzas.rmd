@@ -6,7 +6,7 @@ output: pdf_document
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
+knitr::opts_chunk$set(echo = FALSE, comment = NA)
 setwd("C:/Users/oienh/Documents/R_UNIVERSITY_PROJECTS/5th_Semester/trabajo_finanzas")
 ```
 
@@ -26,46 +26,43 @@ setwd("C:/Users/oienh/Documents/R_UNIVERSITY_PROJECTS/5th_Semester/trabajo_finan
 ```{r}
 library(readxl)
 
-estado_de_resultado <- read_excel("estado_de_resultados.xlsx",  range = "A1:C35")
+estado_de_resultado <- read_excel(
+    "estado_de_resultados.xlsx",  range = "A1:C35")
 balance <- read_excel("balance.xlsx",  range = "A1:C49")
 estado_de_resultado <- estado_de_resultado[-1, ]
 balance <- balance[-1, ]
 ```
 
-
-
-
-
 # Capital trabajo neto
 
 ```{r}
+capital_trabajo_neto_2022 <- as.numeric(balance[1,
+    2]) - as.numeric(balance[21, 2])
+capital_trabajo_neto_2021 <- as.numeric(balance[1,
+    3]) - as.numeric(balance[21, 3])
 
-capital_trabajo_neto_2022 <- as.numeric(balance[1, 2]) - as.numeric(balance[21, 2])
-capital_trabajo_neto_2021 <- as.numeric(balance[1, 3]) - as.numeric(balance[21, 3])
-
-cat(paste0("El capital de trabajo neto fue de USD ",
-format(capital_trabajo_neto_2021, big.mark = " ",
-nsmall = 2, scientific = FALSE),
-" M en el año 2021"), "\n",
-paste0("mientras que en 2022 fue de USD ",
-format(capital_trabajo_neto_2022, big.mark = " ",
-nsmall = 2, scientific = FALSE), " M."))
-
+cat(" El capital de trabajo neto fue de USD",
+    format(capital_trabajo_neto_2021, big.mark = " ", scientific = FALSE,
+    decimal.mark = ","),
+    "M en el año 2021", "\n",
+    "mientras que en 2022 fue de USD",
+    format(capital_trabajo_neto_2022, big.mark = " ", scientific = FALSE,
+    decimal.mark = ","), "M.")
 ```
 
-# liquidez
+# Liquidez
 
 ```{r}
-
 liquidez_2022 <- as.numeric(balance[1, 2]) / as.numeric(balance[21, 2])
 liquidez_2021 <- as.numeric(balance[1, 3]) / as.numeric(balance[21, 3])
 
-cat(paste0("La liquidez del año 2021 fue de ", format(liquidez_2021*100, big.mark = " ",
-nsmall = 2, scientific = FALSE), " %, mientras que"), "\n", 
-paste0(" en el año 2022 fue de ", format(liquidez_2022*100, big.mark = " ",
-nsmall = 2, scientific = FALSE)), " %.")
+cat(" La liquidez del año 2021 fue de",
+    format(round(liquidez_2021 * 100, 2), big.mark = " ",
+    scientific = FALSE, decimal.mark = ","), "%, mientras que", "\n",
+    "en el año 2022 fue de", format(round(liquidez_2022*100, 2), big.mark = " ",
+    scientific = FALSE, decimal.mark = ","), "%.")
 ```
-
+"
 Cosas que pueden ser útiles:
 
 Relativo porcentual
