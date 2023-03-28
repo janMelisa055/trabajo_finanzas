@@ -21,16 +21,20 @@ formato <- function(x) {
 
 ## Instrucciones: Elaborar informe de análisis financiero:
 ## Incluir:
-## - Análisis estático comparativo (últimos dos balances de cierre).
-## - Análisis de liquidez (ratios).
-## - Ratios financieros en genreral.
-## - Ratios económicos (margen, rendimiento, rentabilidad).
+## - Análisis estático comparativo (últimos dos balances de cierre DUDAS).
+## - Análisis de liquidez (ratios HECHO).
+## - Ratios financieros en genreral DUDAS.
+## - Ratios económicos (margen, rendimiento, rentabilidad DUDAS).
 ## - Introducción.
 ## - Marco conceptual.
 ## - Análisis.
 ## - Conclusiones.
 
 # Empresa escogida: Amazon
+
+# Introducción
+
+[ESCRIBIR INTRODUCCIÓN]
 
 ```{r}
 library(readxl)
@@ -66,16 +70,97 @@ liquidez_2022 <- as.numeric(balance[1, 2]) / as.numeric(balance[21, 2])
 liquidez_2021 <- as.numeric(balance[1, 3]) / as.numeric(balance[21, 3])
 # Fórmula: liquidez = activos corrientes / pasivos corrientes.
 
-cat(" La liquidez del año 2021 fue de",
-    formato(liquidez_2021), "%, mientras que", "\n",
-    "en el año 2022 fue de", formato(liquidez_2022 * 100), "%.")
+cat(" La liquidez del año 2021 fue de un ratio de",
+    formato(liquidez_2021*100), "%, mientras que", "\n",
+    "en el año 2022 fue de un ratio de", formato(liquidez_2022*100), "%.")
 ```
 
 # Ratios económicos
 
+## Margen
 
+```{r}
 
-"
+margen <- as.numeric(estado_de_resultado[4,
+    2]) / as.numeric(estado_de_resultado[4, 3]) - 1
+
+cat(" El margen bruto del 2022 ha aumentado en un", formato(margen*100),
+    "% en comparación al año 2021")
+
+```
+
+## Rendimiento
+
+```{r}
+
+```
+Rentabilidad bruta = Resultado bruto / Ingresos
+Rentabilidad operacional = Resultado operacional / Ingresos
+Rentabilidad neta = Resultado neto / Ingresos
+## Rentabilidad
+
+### Rentabilidad Bruta
+```{r}
+rentabilidad_bruta_2022 <- (as.numeric(estado_de_resultado[1,
+    2]) - as.numeric(estado_de_resultado[6,
+    2])) / as.numeric(estado_de_resultado[1, 2])
+
+rentabilidad_bruta_2021 <- (as.numeric(estado_de_resultado[1,
+    3]) - as.numeric(estado_de_resultado[6,
+    3])) / as.numeric(estado_de_resultado[1, 3])
+
+# (Ingresos - Total gastos de operación) / Ingresos
+
+cat(" La rentabilidad bruta del año 2021 fue de",
+    formato(rentabilidad_bruta_2021 * 100), "%", "\n",
+    "mientras que en el año 2022 fue de",
+    formato(rentabilidad_bruta_2022 * 100), "%.", "\n",
+    "La diferencia es de",
+    formato(rentabilidad_bruta_2022 * 100 - rentabilidad_bruta_2021 * 100), "%")
+```
+### Rentabilidad operacional
+
+```{r}
+
+rentabilidad_operacional_2022 <- (as.numeric(estado_de_resultado[1,
+    2]) - as.numeric(estado_de_resultado[6,
+    2]) - as.numeric(estado_de_resultado[7,
+    2])) / as.numeric(estado_de_resultado[1, 2])
+
+rentabilidad_operacional_2021 <- (as.numeric(estado_de_resultado[1,
+    3]) - as.numeric(estado_de_resultado[6,
+    3]) - as.numeric(estado_de_resultado[7,
+    3])) / as.numeric(estado_de_resultado[1, 3])
+
+# (Ingresos - Total gastos de operación - Venta y adm. total) / Ingresos
+# (Ingresos - Total gastos de operación - Venta y adm. total) = Resultado Operacional
+
+cat(" La rentabilidad operacional del año 2021 fue de",
+    formato(rentabilidad_operacional_2021 * 100), "%", "\n",
+    "mientras que en el año 2022 fue de",
+    formato(rentabilidad_operacional_2022 * 100), "%.", "\n",
+    "La diferencia es de",
+    formato(rentabilidad_operacional_2022 * 100 - rentabilidad_operacional_2021 * 100), "%")
+
+```
+```{r}
+rentabilidad_neta_2022 <- as.numeric(estado_de_resultado[25,
+    2]) / as.numeric(estado_de_resultado[1, 2])
+
+rentabilidad_neta_2021 <- as.numeric(estado_de_resultado[25,
+    3]) / as.numeric(estado_de_resultado[1, 3])
+
+cat(" La rentabilidad neta del año 2021 fue de",
+    formato(rentabilidad_neta_2021 * 100), "%", "\n",
+    "mientras que en el año 2022 fue de",
+    formato(rentabilidad_neta_2022 * 100), "%.", "\n",
+    "La diferencia es de",
+    formato(rentabilidad_neta_2022 * 100 - rentabilidad_neta_2021 * 100), "%.")
+
+```
+
+rentabilidad_neta
+*
 Cosas que pueden ser útiles:
 
 Relativo porcentual

@@ -9,25 +9,24 @@ output:
 
 ```{r setup, echo=TRUE}
 knitr::opts_chunk$set(echo = TRUE)
-options(scipen = 999)
+options(scipen=999)
 ```
 
 
 Vamos a poner el directorio de trabajo correcto:
 
 ```{r}
-setwd("C:/Users/oienh/Documents/R_UNIVERSITY_PROJECTS/5th_Semester")
+setwd('C:/Users/guillermo.yanez/OneDrive/Cursos UDP/FI9123')
 ```
 
 Comencemos con análisis financiero:
 
 Para ello vamos a importar un archivo Excel, necesitaremos install.packages('readxl')
 
-```{r}
+```{r echo=TRUE, message=TRUE, warning=TRUE, include=TRUE}
 library(readxl)
 
-balance <- read_xlsx("Ejercicio2103.xlsx", sheet = "Balance",
-range = "A1:D6", col_names = TRUE)
+balance <- read_xlsx('Ejercicio2103.xlsx', sheet = "Balance",range = "A1:D6",col_names=T)
 
 ```
 
@@ -35,13 +34,10 @@ Sumemos las columnas:
 
 ```{r}
 
-suma <- apply(balance[, c(2, 4)], 2, sum)
+suma <- apply(balance[,c(2,4)],2,sum)
 
-balance[6, 2] <- suma[1]
-balance[6, 4] <- suma[2]
-# Añadí "Total" al balance.
-balance[6, 1] <- "Total"
-balance[6, 3] <- "Total"
+balance[6,2] <- suma[1]
+balance[6,4] <- suma[2]
 
 ```
 
@@ -49,8 +45,7 @@ Armemos el estado de resultados:
 
 ```{r}
 
-eerr <- read_xlsx("Ejercicio2103.xlsx", sheet = "EERR", range = "A1:B5",
-col_names = TRUE)
+eerr <- read_xlsx('Ejercicio2103.xlsx', sheet = "EERR",range = "A1:B5",col_names=T)
 
 ```
 
@@ -62,67 +57,110 @@ Vamos a hacer un análisis estático del balance: (vamos a ver el peso relativo 
 
 balance2 <- balance
 
-total <- as.numeric(balance2[6, 2])
-relativo <- apply(balance2[, c(2, 4)], 2, function(x) x / total)
+total <- as.numeric(balance2[6,2])
+relativo <- apply(balance2[,c(2,4)],2,function(x) x/total)
 
-balance2[, 2] <- relativo[, 1]
-balance2[, 4] <- relativo[, 2]
+balance2[,2] <- relativo[,1]
+balance2[,4] <- relativo[,2]
 
 ```
 
-## Veamos algunos ratios financieros
+# Veamos algunos ratios financieros
 
 - Ratios: Relación entre una variable y otra. Se comporta como un índice (no tiene unidad de medida sino que es interpretativo)
 - Proporciones: Lo que hicimos en análisis estático
 - Tasas: % Relativo de una variable respecto a otra o tasa de variación temporal.
 
-### Liquidez
+## Liquidez
 
 Capital de trabajo neto:
 
 Activo corriente - pasivo corriente
-La diferencia entre el activo corriente y el pasivo corriente es Capital de Trabajo Neto
 ```{r}
 
-activo_corriente <- sum(balance[c(1:3), 2])
-pasivo_corriente <-  sum(balance[c(1:2), 4])
-kapital_trabajo_neto <- activo_corriente - pasivo_corriente
+AC <- sum(balance[c(1:3),2])
+PC <-  sum(balance[c(1:2),4])
+KTN <- AC - PC
 
 ```
 
 Vemos que es positivo.
 
+
 ### Liquidez corriente:
 
-liquidez = activo_corriente / pasivo_corriente
+Liquidez = AC / PC
 
 ```{r}
-liquidez <- activo_corriente / pasivo_corriente
+
+Liquidez <- AC / PC
 ```
-Por un peso de deuda es 1.82 veces de activo corriente.
- 
-```{r}
-prueba_acida <- (activo_corriente - balance[3, 2]) / pasivo_corriente
-# balance[3, 2]: inventarios
-prueba_acida <- as.numeric(prueba_acida)
-```
+
+Verifiquemos vía prueba ácida:
+
+Prueba ácida = (AC - inventarios) / PC
 
 ```{r}
-liq_inm <- balance[1, 2] / pasivo_corriente
-liq_inm <- as.numeric(liq_inm)
+
+P_acida <- sum(balance[c(1,2),2]) / sum(balance[c(1,2),4])
+
 ```
-Solvencia (largo plazo)
+Se ve solvencia de corto plazo. Veamos ahora la prueba de liquidez (por capacidad de pago) más estricta.
+
+Liquidez inmediata = Efectivo y equivalente / PC
+
+(ya es bastante inusual que sea >1)
 
 ```{r}
-solvencia <- total / (total - sum(balance[c(4, 5), 4])) # pasivos / patrimonio
-```
 
-Endeudamiento
+liq_inm <- balance[1,2] / sum(balance[c(1,2),4])
+print(liq_inm)
+
+```
+Veamos dos ratios importante de más largo plazo:
+
+Solvencia = Activo total / Pasivo exigible.
+
+A no olvidar: Pasivo exigible = PC + PnC (excluimos patrimonio)
 
 ```{r}
-endeudamiento <- (total - sum(balance[c(4, 5), 4])) / sum(balance[c(4, 5), 4])
+
+Solvencia <- as.numeric(balance[6,2] / (balance[6,4] - balance[5,4]-balance[4,4]))
+
+print(Solvencia)
+
+```
+Indice de endeudamiento:
+
+Indice de endeudamiento = Pasivo exigible / patrimonio
+
+```{r}
+endeudamiento <- as.numeric((balance[6,4] - balance[5,4]-balance[4,4]) / (balance[5,4] + balance[4,4]))
+print(endeudamiento)
 ```
 
-Márgenes:
+Verifiquemos:
 
-Dos periodos de tiempo, comparar.
+Solvencia = 1 + (1/Endeudamiento)
+
+```{r}
+Solvencia1 <- 1+(1/endeudamiento)
+```
+
+Vamos ahora al estado de resultados:
+
+# Indicadores económicos de la empresa
+
+## Márgenes:
+
+Rentabilidad bruta = Resultado bruto / Ingresos
+Rentabilidad operacional = Resultado operacional / Ingresos
+Rentabilidad neta = Resultado neto / Ingresos
+
++ Ingresos
+- Costo de explotación
+= Resultado bruto
+- Gastos de adm. y venta
+= Resultado operacional
+- Gastos financieros
+= Resultado neto
