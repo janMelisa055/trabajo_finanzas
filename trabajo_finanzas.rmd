@@ -60,7 +60,9 @@ cat(" El capital de trabajo neto fue de USD",
     formato(capital_trabajo_neto_2021),
     "M en el año 2021", "\n",
     "mientras que en 2022 fue de USD",
-    formato(capital_trabajo_neto_2022), "M.")
+    formato(capital_trabajo_neto_2022), "M.", "\n",
+    "La diferencia es de USD",
+    capital_trabajo_neto_2022 - capital_trabajo_neto_2021, "M.")
 ```
 
 # Liquidez
@@ -71,8 +73,9 @@ liquidez_2021 <- as.numeric(balance[1, 3]) / as.numeric(balance[21, 3])
 # Fórmula: liquidez = activos corrientes / pasivos corrientes.
 
 cat(" La liquidez del año 2021 fue de un ratio de",
-    formato(liquidez_2021*100), "%, mientras que", "\n",
-    "en el año 2022 fue de un ratio de", formato(liquidez_2022*100), "%.")
+    formato(liquidez_2021 * 100), "%, mientras que", "\n",
+    "en el año 2022 fue de un ratio de", formato(liquidez_2022*100), "%.", "\n",
+    "La diferencia fue de", liquidez_2022 - liquidez_2021, "%.")
 ```
 
 # Ratios económicos
@@ -84,7 +87,7 @@ cat(" La liquidez del año 2021 fue de un ratio de",
 margen <- as.numeric(estado_de_resultado[4,
     2]) / as.numeric(estado_de_resultado[4, 3]) - 1
 
-cat(" El margen bruto del 2022 ha aumentado en un", formato(margen*100),
+cat(" El margen bruto del 2022 ha aumentado en un", formato(margen * 100),
     "% en comparación al año 2021.")
 
 ```
@@ -132,8 +135,8 @@ rentabilidad_operacional_2021 <- (as.numeric(estado_de_resultado[1,
     3]) - as.numeric(estado_de_resultado[7,
     3])) / as.numeric(estado_de_resultado[1, 3])
 
-# (Ingresos - Total gastos de operación - Venta y adm. total) / Ingresos
-# (Ingresos - Total gastos de operación - Venta y adm. total) = Resultado Operacional
+# (Ingresos - Total gastos de operación - Venta y adm. total) / Ingresos = Rentabilidad Operacional.
+# (Ingresos - Total gastos de operación - Venta y adm. total) = Resultado Operacional.
 
 cat(" La rentabilidad operacional del año 2021 fue de",
     formato(rentabilidad_operacional_2021 * 100), "%", "\n",
