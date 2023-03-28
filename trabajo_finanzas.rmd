@@ -1,12 +1,16 @@
 ---
 output: pdf_document
 ---
+```{r setup, include = FALSE}
+setwd("C:/Users/oienh/Documents/R_UNIVERSITY_PROJECTS/5th_Semester/trabajo_finanzas")
+knitr::opts_chunk$set(echo = FALSE, comment = NA)
+```
 ```{r, echo=FALSE, fig.align = "left"}
 knitr::include_graphics("logo.png")
 ```
 \center
 # Trabajo Grupal Finanzas I
-## 2023-03-30
+## 2023-04-02
 \flushleft
 \
 ```{r, echo=FALSE, fig.align = "center"}
@@ -20,13 +24,12 @@ knitr::include_graphics("coat_of_arms.png")
 * Exequiel Valdés Zúñiga
 
 \newpage
+
 *En este documento se hará uso de los prefijos
 SI^[k: × 1 000, M: × 1 000 000, G: × 1 000 000 000. [Wikipedia](https://en.wikipedia.org/wiki/Metric_prefix)] 
 para la representación de cantidades de dinero.
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE, comment = NA)
-
+```{r, include=FALSE}
 formato <- function(x) {
     format(round(x, 2), big.mark = " ", scientific = FALSE,
     decimal.mark = ",")
