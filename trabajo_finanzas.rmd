@@ -85,7 +85,7 @@ margen <- as.numeric(estado_de_resultado[4,
     2]) / as.numeric(estado_de_resultado[4, 3]) - 1
 
 cat(" El margen bruto del 2022 ha aumentado en un", formato(margen*100),
-    "% en comparación al año 2021")
+    "% en comparación al año 2021.")
 
 ```
 
@@ -116,9 +116,9 @@ cat(" La rentabilidad bruta del año 2021 fue de",
     "mientras que en el año 2022 fue de",
     formato(rentabilidad_bruta_2022 * 100), "%.", "\n",
     "La diferencia es de",
-    formato(rentabilidad_bruta_2022 * 100 - rentabilidad_bruta_2021 * 100), "%")
+    formato(rentabilidad_bruta_2022 * 100 - rentabilidad_bruta_2021 * 100), "%.")
 ```
-### Rentabilidad operacional
+### Rentabilidad Operacional
 
 ```{r}
 
@@ -140,9 +140,12 @@ cat(" La rentabilidad operacional del año 2021 fue de",
     "mientras que en el año 2022 fue de",
     formato(rentabilidad_operacional_2022 * 100), "%.", "\n",
     "La diferencia es de",
-    formato(rentabilidad_operacional_2022 * 100 - rentabilidad_operacional_2021 * 100), "%")
+    formato(rentabilidad_operacional_2022 * 100 - rentabilidad_operacional_2021 * 100),
+    "%.")
 
 ```
+### Rentabilidad Neta
+
 ```{r}
 rentabilidad_neta_2022 <- as.numeric(estado_de_resultado[25,
     2]) / as.numeric(estado_de_resultado[1, 2])
