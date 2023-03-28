@@ -14,12 +14,15 @@ knitr::include_graphics("coat_of_arms.png")
 ```
 \
 
+* Amanda Araya Orrego
+* Lucas Oliva Valverde
 * Melissa Sumi Ibata
-* Lucas
-* Amanda
-* Exequiel
+* Exequiel Valdés Zúñiga
 
 \newpage
+*En este documento se hará uso de los prefijos
+SI^[k: × 1 000, M: × 1 000 000, G: × 1 000 000 000. [Wikipedia](https://en.wikipedia.org/wiki/Metric_prefix)] 
+para la representación de cantidades de dinero.
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE, comment = NA)
@@ -108,12 +111,11 @@ cat("El margen bruto del 2022 ha aumentado en un",
 ## Rendimiento
 
 ```{r}
+# Rentabilidad bruta = Resultado bruto / Ingresos
+# Rentabilidad operacional = Resultado operacional / Ingresos
+# Rentabilidad neta = Resultado neto / Ingresos
 
 ```
-Rentabilidad bruta = Resultado bruto / Ingresos
-Rentabilidad operacional = Resultado operacional / Ingresos
-Rentabilidad neta = Resultado neto / Ingresos
-
 ## Rentabilidad
 
 ### Rentabilidad Bruta
@@ -180,8 +182,6 @@ cat("La rentabilidad neta del año 2021 fue de",
 
 ```
 
-rentabilidad_neta
-*
 Cosas que pueden ser útiles:
 
 Relativo porcentual
@@ -210,8 +210,5 @@ prueba_acida <- (activo_corriente - inventarios) / pasivo_corriente
 liquidez_inmediata <- efectivo y equivalente / pasivo_corriente
 solvencia <- pasivos / patrimonio
 endeudamiento <- (pasivos - patrimonio) / patrimonio
-
-
-
 
 
