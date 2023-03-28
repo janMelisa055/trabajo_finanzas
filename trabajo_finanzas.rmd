@@ -1,15 +1,28 @@
 ---
-title: "Trabajo Finanzas I"
-author: "Melissa, Lucas, Amanda, Exequiel"
-date: "2023-03-30"
 output: pdf_document
 ---
+```{r, echo=FALSE, fig.align = "left"}
+knitr::include_graphics("logo.png")
+```
+\center
+# Trabajo Grupal Finanzas I
+## 2023-03-30
+\flushleft
+\
+```{r, echo=FALSE, fig.align = "center"}
+knitr::include_graphics("coat_of_arms.png")
+```
+\
+
+* Melissa Sumi Ibata
+* Lucas
+* Amanda
+* Exequiel
 
 \newpage
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE, comment = NA)
-setwd("C:/Users/oienh/Documents/R_UNIVERSITY_PROJECTS/5th_Semester/trabajo_finanzas")
 
 formato <- function(x) {
     format(round(x, 2), big.mark = " ", scientific = FALSE,
@@ -56,13 +69,11 @@ capital_trabajo_neto_2021 <- as.numeric(balance[1,
     3]) - as.numeric(balance[21, 3])
 # Fórmula: capital trabajo neto = activos corrientes - pasivos corrientes.
 
-cat(" El capital de trabajo neto fue de USD",
+cat("El capital de trabajo neto fue de USD",
     formato(capital_trabajo_neto_2021),
-    "M en el año 2021", "\n",
-    "mientras que en 2022 fue de USD",
-    formato(capital_trabajo_neto_2022), "M.", "\n",
-    "La diferencia es de USD",
-    capital_trabajo_neto_2022 - capital_trabajo_neto_2021, "M.")
+    "M en el año 2021.\nMientras que en 2022 fue de USD",
+    formato(capital_trabajo_neto_2022), "M.\nLa diferencia es de USD",
+    formato(capital_trabajo_neto_2022 - capital_trabajo_neto_2021), "M.")
 ```
 
 # Liquidez
@@ -72,10 +83,11 @@ liquidez_2022 <- as.numeric(balance[1, 2]) / as.numeric(balance[21, 2])
 liquidez_2021 <- as.numeric(balance[1, 3]) / as.numeric(balance[21, 3])
 # Fórmula: liquidez = activos corrientes / pasivos corrientes.
 
-cat(" La liquidez del año 2021 fue de un ratio de",
-    formato(liquidez_2021 * 100), "%, mientras que", "\n",
-    "en el año 2022 fue de un ratio de", formato(liquidez_2022*100), "%.", "\n",
-    "La diferencia fue de", liquidez_2022 - liquidez_2021, "%.")
+cat("La liquidez del año 2021 fue de un ratio de",
+    formato(liquidez_2021 * 100),
+    "%.\nMientras que en el año 2022 fue de un ratio de",
+    formato(liquidez_2022*100), "%.\nLa diferencia fue de",
+    formato((liquidez_2022 - liquidez_2021) * 100), "%.")
 ```
 
 # Ratios económicos
@@ -87,7 +99,8 @@ cat(" La liquidez del año 2021 fue de un ratio de",
 margen <- as.numeric(estado_de_resultado[4,
     2]) / as.numeric(estado_de_resultado[4, 3]) - 1
 
-cat(" El margen bruto del 2022 ha aumentado en un", formato(margen * 100),
+cat("El margen bruto del 2022 ha aumentado en un",
+    formato(margen * 100),
     "% en comparación al año 2021.")
 
 ```
@@ -100,6 +113,7 @@ cat(" El margen bruto del 2022 ha aumentado en un", formato(margen * 100),
 Rentabilidad bruta = Resultado bruto / Ingresos
 Rentabilidad operacional = Resultado operacional / Ingresos
 Rentabilidad neta = Resultado neto / Ingresos
+
 ## Rentabilidad
 
 ### Rentabilidad Bruta
@@ -114,12 +128,13 @@ rentabilidad_bruta_2021 <- (as.numeric(estado_de_resultado[1,
 
 # (Ingresos - Total gastos de operación) / Ingresos
 
-cat(" La rentabilidad bruta del año 2021 fue de",
-    formato(rentabilidad_bruta_2021 * 100), "%", "\n",
-    "mientras que en el año 2022 fue de",
-    formato(rentabilidad_bruta_2022 * 100), "%.", "\n",
-    "La diferencia es de",
-    formato(rentabilidad_bruta_2022 * 100 - rentabilidad_bruta_2021 * 100), "%.")
+cat("La rentabilidad bruta del año 2021 fue de",
+    formato(rentabilidad_bruta_2021 * 100),
+    "%.\nMientras que en el año 2022 fue de",
+    formato(rentabilidad_bruta_2022 * 100),
+    "%.\nLa diferencia es de",
+    formato(rentabilidad_bruta_2022 * 100 - rentabilidad_bruta_2021 * 100),
+    "%.")
 ```
 ### Rentabilidad Operacional
 
@@ -138,11 +153,11 @@ rentabilidad_operacional_2021 <- (as.numeric(estado_de_resultado[1,
 # (Ingresos - Total gastos de operación - Venta y adm. total) / Ingresos = Rentabilidad Operacional.
 # (Ingresos - Total gastos de operación - Venta y adm. total) = Resultado Operacional.
 
-cat(" La rentabilidad operacional del año 2021 fue de",
-    formato(rentabilidad_operacional_2021 * 100), "%", "\n",
-    "mientras que en el año 2022 fue de",
-    formato(rentabilidad_operacional_2022 * 100), "%.", "\n",
-    "La diferencia es de",
+cat("La rentabilidad operacional del año 2021 fue de",
+    formato(rentabilidad_operacional_2021 * 100),
+    "%.\nMientras que en el año 2022 fue de",
+    formato(rentabilidad_operacional_2022 * 100),
+    "%.\nLa diferencia es de",
     formato(rentabilidad_operacional_2022 * 100 - rentabilidad_operacional_2021 * 100),
     "%.")
 
@@ -156,11 +171,11 @@ rentabilidad_neta_2022 <- as.numeric(estado_de_resultado[25,
 rentabilidad_neta_2021 <- as.numeric(estado_de_resultado[25,
     3]) / as.numeric(estado_de_resultado[1, 3])
 
-cat(" La rentabilidad neta del año 2021 fue de",
-    formato(rentabilidad_neta_2021 * 100), "%", "\n",
-    "mientras que en el año 2022 fue de",
-    formato(rentabilidad_neta_2022 * 100), "%.", "\n",
-    "La diferencia es de",
+cat("La rentabilidad neta del año 2021 fue de",
+    formato(rentabilidad_neta_2021 * 100),
+    "%.\nMientras que en el año 2022 fue de",
+    formato(rentabilidad_neta_2022 * 100),
+    "%.\nLa diferencia es de",
     formato(rentabilidad_neta_2022 * 100 - rentabilidad_neta_2021 * 100), "%.")
 
 ```
