@@ -123,15 +123,13 @@ cat("El margen bruto del 2022 ha aumentado en un",
 
 ### Rentabilidad Bruta
 ```{r}
-rentabilidad_bruta_2022 <- (as.numeric(estado_de_resultado[1,
-    2]) - as.numeric(estado_de_resultado[6,
-    2])) / as.numeric(estado_de_resultado[1, 2])
+rentabilidad_bruta_2022 <- as.numeric(estado_de_resultado[5,
+    2]) / as.numeric(estado_de_resultado[1, 2])
 
-rentabilidad_bruta_2021 <- (as.numeric(estado_de_resultado[1,
-    3]) - as.numeric(estado_de_resultado[6,
-    3])) / as.numeric(estado_de_resultado[1, 3])
+rentabilidad_bruta_2021 <- as.numeric(estado_de_resultado[5,
+    3]) / as.numeric(estado_de_resultado[1, 3])
 
-# (Ingresos - Total gastos de operación) / Ingresos
+# Utilidad bruta / Ingresos
 
 cat("La rentabilidad bruta del año 2021 fue de",
     formato(rentabilidad_bruta_2021 * 100),
@@ -145,18 +143,13 @@ cat("La rentabilidad bruta del año 2021 fue de",
 
 ```{r}
 
-rentabilidad_operacional_2022 <- (as.numeric(estado_de_resultado[1,
-    2]) - as.numeric(estado_de_resultado[6,
-    2]) - as.numeric(estado_de_resultado[7,
-    2])) / as.numeric(estado_de_resultado[1, 2])
+rentabilidad_operacional_2022 <- as.numeric(estado_de_resultado[13,
+    2]) / as.numeric(estado_de_resultado[1, 2])
 
-rentabilidad_operacional_2021 <- (as.numeric(estado_de_resultado[1,
-    3]) - as.numeric(estado_de_resultado[6,
-    3]) - as.numeric(estado_de_resultado[7,
-    3])) / as.numeric(estado_de_resultado[1, 3])
+rentabilidad_operacional_2021 <- as.numeric(estado_de_resultado[13,
+    3]) / as.numeric(estado_de_resultado[1, 3])
 
-# (Ingresos - Total gastos de operación - Venta y adm. total) / Ingresos = Rentabilidad Operacional.
-# (Ingresos - Total gastos de operación - Venta y adm. total) = Resultado Operacional.
+# Utilidad de operación / Ingreso
 
 cat("La rentabilidad operacional del año 2021 fue de",
     formato(rentabilidad_operacional_2021 * 100),
@@ -175,6 +168,8 @@ rentabilidad_neta_2022 <- as.numeric(estado_de_resultado[25,
 
 rentabilidad_neta_2021 <- as.numeric(estado_de_resultado[25,
     3]) / as.numeric(estado_de_resultado[1, 3])
+
+# Resultado neto / Ingreso
 
 cat("La rentabilidad neta del año 2021 fue de",
     formato(rentabilidad_neta_2021 * 100),
