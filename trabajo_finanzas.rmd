@@ -77,7 +77,7 @@ liquidez_2021 <- as.numeric(balance[1, 3]) / as.numeric(balance[21, 3])
 cat("La liquidez del año 2021 fue de",
     formato(liquidez_2021),
     ".\nMientras que en el año 2022 fue de",
-    formato(liquidez_2022), ".\nLa diferencia fue de",
+    formato(liquidez_2022), ".\nLa diferencia es de",
     formato(liquidez_2022 - liquidez_2021), ".")
 ```
 Este indicador nos mostrara que por cada peso o más bien dólar en el caso de esta empresa
@@ -101,7 +101,7 @@ liquidez_inmediata_2021 <- as.numeric(balance[4, 3]) / as.numeric(balance[21, 3]
 cat("La liquidez inmediata del año 2021 fue de",
     formato(liquidez_inmediata_2021),
     ".\nMientras que en el año 2022 fue de",
-    formato(liquidez_inmediata_2022), ".\nLa diferencia fue de",
+    formato(liquidez_inmediata_2022), ".\nLa diferencia es de",
     formato(liquidez_inmediata_2022 - liquidez_inmediata_2021), ".")
 ```
 El caso más pesimista para una crisis donde para cumplir con las obligaciones a corto plazo,
@@ -123,7 +123,7 @@ prueba_acida_2021 <- (as.numeric(balance[1,
 cat("La prueba ácida del año 2021 fue de",
     formato(prueba_acida_2021),
     ".\nMientras que en el año 2022 fue de",
-    formato(prueba_acida_2022), ".\nLa diferencia fue de",
+    formato(prueba_acida_2022), ".\nLa diferencia es de",
     formato(prueba_acida_2022 - prueba_acida_2021), ".")
 ```
 Este indicador nos mostrara que por cada dólar que debe la empresa a corto plazo tiene
@@ -145,7 +145,7 @@ solvencia_2021 <- as.numeric(balance[11, 3]) / as.numeric(balance[28, 3])
 cat("La solvenncia del año 2021 fue de",
     formato(solvencia_2021),
     ".\nMientras que en el año 2022 fue de",
-    formato(solvencia_2022), ".\nLa diferencia fue de",
+    formato(solvencia_2022), ".\nLa diferencia es de",
     formato(solvencia_2022 - solvencia_2021), ".")
 ```
 El indicador de solvencia nos muestra la capacidad que tiene una empresa de poder cumplir
@@ -166,98 +166,101 @@ endeudamiento_2021 <- as.numeric(balance[28, 3]) / as.numeric(balance[35, 3])
 cat("El endeudamiento del año 2021 fue de",
     formato(endeudamiento_2021),
     ".\nMientras que en el año 2022 fue de",
-    formato(endeudamiento_2022), ".\nLa diferencia fue de",
+    formato(endeudamiento_2022), ".\nLa diferencia es de",
     formato(endeudamiento_2022 - endeudamiento_2021), ".")
 ```
 
-# Ratios económicos
+# Márgenes
 
-### Rentabilidad Bruta
+### Margen Bruto
 ```{r}
-rentabilidad_bruta_2022 <- as.numeric(estado_de_resultado[5,
+margen_bruto_2022 <- as.numeric(estado_de_resultado[5,
     2]) / as.numeric(estado_de_resultado[1, 2])
 
-rentabilidad_bruta_2021 <- as.numeric(estado_de_resultado[5,
+margen_bruto_2021 <- as.numeric(estado_de_resultado[5,
     3]) / as.numeric(estado_de_resultado[1, 3])
 
 # Utilidad bruta / Ingresos
 
-cat("La rentabilidad bruta del año 2021 fue de",
-    formato(rentabilidad_bruta_2021 * 100),
+cat("El margen bruto del año 2021 fue de",
+    formato(margen_bruto_2021 * 100),
     "%.\nMientras que en el año 2022 fue de",
-    formato(rentabilidad_bruta_2022 * 100),
+    formato(margen_bruto_2022 * 100),
     "%.\nLa diferencia es de",
-    formato(rentabilidad_bruta_2022 * 100 - rentabilidad_bruta_2021 * 100),
+    formato(margen_bruto_2022 * 100 - margen_bruto_2021 * 100),
     "%.")
 ```
-### Rentabilidad Operacional
+### Margen Operacional
 
 ```{r}
 
-rentabilidad_operacional_2022 <- as.numeric(estado_de_resultado[13,
+margen_operacional_2022 <- as.numeric(estado_de_resultado[13,
     2]) / as.numeric(estado_de_resultado[1, 2])
 
-rentabilidad_operacional_2021 <- as.numeric(estado_de_resultado[13,
+margen_operacional_2021 <- as.numeric(estado_de_resultado[13,
     3]) / as.numeric(estado_de_resultado[1, 3])
 
 # Utilidad de operación / Ingreso
 
-cat("La rentabilidad operacional del año 2021 fue de",
-    formato(rentabilidad_operacional_2021 * 100),
+cat("El margen operacional del año 2021 fue de",
+    formato(margen_operacional_2021 * 100),
     "%.\nMientras que en el año 2022 fue de",
-    formato(rentabilidad_operacional_2022 * 100),
+    formato(margen_operacional_2022 * 100),
     "%.\nLa diferencia es de",
-    formato(rentabilidad_operacional_2022 * 100 - rentabilidad_operacional_2021 * 100),
+    formato(margen_operacional_2022 * 100 - margen_operacional_2021 * 100),
     "%.")
 
 ```
-### Rentabilidad Neta
+### Margen Neto
 
 ```{r}
-rentabilidad_neta_2022 <- as.numeric(estado_de_resultado[25,
+margen_neto_2022 <- as.numeric(estado_de_resultado[25,
     2]) / as.numeric(estado_de_resultado[1, 2])
 
-rentabilidad_neta_2021 <- as.numeric(estado_de_resultado[25,
+margen_neto_2021 <- as.numeric(estado_de_resultado[25,
     3]) / as.numeric(estado_de_resultado[1, 3])
 
 # Resultado neto / Ingreso
 
-cat("La rentabilidad neta del año 2021 fue de",
-    formato(rentabilidad_neta_2021 * 100),
+cat("El margen neto del año 2021 fue de",
+    formato(margen_neto_2021 * 100),
     "%.\nMientras que en el año 2022 fue de",
-    formato(rentabilidad_neta_2022 * 100),
+    formato(margen_neto_2022 * 100),
     "%.\nLa diferencia es de",
-    formato(rentabilidad_neta_2022 * 100 - rentabilidad_neta_2021 * 100), "%.")
+    formato(margen_neto_2022 * 100 - margen_neto_2021 * 100), "%.")
 
 ```
 
-Cosas que pueden ser útiles:
+# Ratio de Rentabilidad
 
-Relativo porcentual
+## ROA (Ratio de Capital Propio)
 
-efectivo y equivalente
-cuentas por cobrar
-inventarios
-activo fijo
-otros activos largo plazo
-total
-banco corto plazo
-proveedores
-banco largo plazo
-capital
-resultado acumulado
-total
+```{r}
+roa_2022 <- as.numeric(estado_de_resultado[25,
+    2]) / as.numeric(balance[11, 2])
+roa_2021 <- as.numeric(estado_de_resultado[25,
+    3]) / as.numeric(balance[11, 3])
+# Fórmula: ROA = resultado neto / activo total * 100
 
+cat("El ROA fue de",
+    formato(roa_2021 * 100),
+    "% en el año 2021.\nMientras que en 2022 fue de",
+    formato(roa_2022 * 100), "%.\nLa diferencia es de USD",
+    formato((roa_2022 - roa_2021) * 100), "%.")
+```
 
-total <- "la suma de todo lol"
-relativo_porcentual <- apply("", function(x) x / total)
-activo_corriente <- sum()
-pasivo_corriente <- sum()
-capital_trabajo_neto <- activo_corriente - pasivo_corriente
-liquidez <- activo_corriente / pasivo_corriente
-prueba_acida <- (activo_corriente - inventarios) / pasivo_corriente
-liquidez_inmediata <- efectivo y equivalente / pasivo_corriente
-solvencia <- pasivos / patrimonio
-endeudamiento <- (pasivos - patrimonio) / patrimonio
+## ROI (Ratio de Rentabilidad de Ventas)
 
+```{r}
+roi_2022 <- as.numeric(estado_de_resultado[25,
+    2]) / as.numeric(balance[35, 2])
+roi_2021 <- as.numeric(estado_de_resultado[25,
+    3]) / as.numeric(balance[35, 3])
+# Fórmula: roi = resultado neto / patrimonio * 100
 
+cat("El ROI fue de",
+    formato(roi_2021 * 100),
+    "% en el año 2021.\nMientras que en 2022 fue de",
+    formato(roi_2022 * 100), "%.\nLa diferencia es de",
+    formato((roi_2022 - roi_2021) * 100), "%.")
+```
