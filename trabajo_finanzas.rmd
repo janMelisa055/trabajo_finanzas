@@ -263,7 +263,20 @@ cat("El margen neto del año 2021 fue de",
 
 ## ROE (Rendimiento Sobre el Patrimonio)
 
+```{r}
+roe_2022 <- as.numeric(estado_de_resultado[25,
+    2]) / (as.numeric(balance[11, 2]) - as.numeric(balance[28, 2]))
+roe_2021 <- as.numeric(estado_de_resultado[25,
+    3]) / (as.numeric(balance[11, 3]) - as.numeric(balance[28, 3]))
+# Fórmula: ROE = resultado neto / capital de los accionistas
+# capital de los accionistas = activos totales - pasivos totales
 
+cat("El ROE fue de",
+    formato(roe_2021 * 100),
+    "% en el año 2021.\nMientras que en 2022 fue de",
+    formato(roe_2022 * 100), "%.\nLa diferencia es de USD",
+    formato((roe_2022 - roe_2021) * 100), "%.")
+```
 
 # Ratios de Rentabilidad
 
@@ -274,7 +287,7 @@ roa_2022 <- as.numeric(estado_de_resultado[25,
     2]) / as.numeric(balance[11, 2])
 roa_2021 <- as.numeric(estado_de_resultado[25,
     3]) / as.numeric(balance[11, 3])
-# Fórmula: ROA = resultado neto / activo total * 100
+# Fórmula: ROA = resultado neto / activo total
 
 cat("El ROA fue de",
     formato(roa_2021 * 100),
@@ -290,7 +303,7 @@ roi_2022 <- as.numeric(estado_de_resultado[25,
     2]) / as.numeric(balance[35, 2])
 roi_2021 <- as.numeric(estado_de_resultado[25,
     3]) / as.numeric(balance[35, 3])
-# Fórmula: roi = resultado neto / patrimonio * 100
+# Fórmula: ROI = resultado neto / patrimonio
 
 cat("El ROI fue de",
     formato(roi_2021 * 100),
@@ -298,6 +311,3 @@ cat("El ROI fue de",
     formato(roi_2022 * 100), "%.\nLa diferencia es de",
     formato((roi_2022 - roi_2021) * 100), "%.")
 ```
-
-## ROIC (Retorno Sobre Capital Invertido)
-
