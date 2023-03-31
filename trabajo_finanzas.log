@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.3.30)  31 MAR 2023 11:36
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.3.30)  31 MAR 2023 14:48
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -404,12 +404,12 @@ Package hyperref Info: Link coloring OFF on input line 70.
 \@outlinefile=\write3
 \openout3 = `trabajo_finanzas.out'.
 
-<logo.png, id=84, 150.5625pt x 56.21pt>
+<logo.png, id=88, 150.5625pt x 56.21pt>
 File: logo.png Graphic file (type png)
 <use logo.png>
 Package pdftex.def Info: logo.png  used on input line 73.
 (pdftex.def)             Requested size: 150.569pt x 56.21242pt.
-<coat_of_arms.png, id=86, 301.125pt x 355.82938pt>
+<coat_of_arms.png, id=90, 301.125pt x 355.82938pt>
 File: coat_of_arms.png Graphic file (type png)
 <use coat_of_arms.png>
 Package pdftex.def Info: coat_of_arms.png  used on input line 84.
@@ -420,67 +420,67 @@ File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ) [1
 
 {c:/Users/oienh/AppData/Roaming/TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{c:/Users/oienh/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{c:/Users/oienh/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc} <./logo.png> <./coat_of_arms.png>]
-LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 104.
-(c:/Users/oienh/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/ot1lmr.fd
-File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 104.
-(c:/Users/oienh/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/omllmm.fd
-File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
-LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 104.
-(c:/Users/oienh/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/omslmsy.fd
-File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
-LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 104.
-(c:/Users/oienh/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/omxlmex.fd
-File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 104.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 104.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 104.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 104.
-(c:/Users/oienh/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Trying to load font information for U+msb on input line 104.
-(c:/Users/oienh/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-<framework.png, id=100, 492.84125pt x 574.145pt>
+<framework.png, id=103, 492.84125pt x 574.145pt>
 File: framework.png Graphic file (type png)
 <use framework.png>
-Package pdftex.def Info: framework.png  used on input line 131.
+Package pdftex.def Info: framework.png  used on input line 126.
 (pdftex.def)             Requested size: 492.85506pt x 574.16112pt.
 
-Overfull \hbox (23.10004pt too wide) in paragraph at lines 131--131
+Overfull \hbox (23.10004pt too wide) in paragraph at lines 126--126
  [] 
  []
 
 [2]
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 136.
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 134.
 (c:/Users/oienh/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-) [3 <./framework.png>] [4] [5] [6] [7] [8] (./trabajo_finanzas.aux)
+) [3 <./framework.png>] [4] [5] [6] [7]
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 299.
+(c:/Users/oienh/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/ot1lmr.fd
+File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 299.
+(c:/Users/oienh/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/omllmm.fd
+File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 299.
+(c:/Users/oienh/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/omslmsy.fd
+File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 299.
+(c:/Users/oienh/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/omxlmex.fd
+File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <12> on input line 299.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <8> on input line 299.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <6> on input line 299.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 299.
+(c:/Users/oienh/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 299.
+(c:/Users/oienh/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+) [8] (./trabajo_finanzas.aux)
 Package rerunfilecheck Info: File `trabajo_finanzas.out' has not changed.
-(rerunfilecheck)             Checksum: 5ED7D3DB943CE4B40E9398189A260C11;3016.
+(rerunfilecheck)             Checksum: 8A6EC51EF73692BDB338AECD24460C0C;3129.
  ) 
 Here is how much of TeX's memory you used:
- 10885 strings out of 477985
- 173288 string characters out of 5837740
+ 10886 strings out of 477985
+ 173297 string characters out of 5837740
  1856382 words of memory out of 5000000
  30860 multiletter control sequences out of 15000+600000
- 545224 words of font info for 58 fonts, out of 8000000 for 9000
+ 544809 words of font info for 57 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  75i,5n,76p,341b,570s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/Users/oienh/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx12.pfb><c:/Users/oienh/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr12.pfb><c:/Users/oienh/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmri12.pfb><c:/Users/oienh/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmtt12.pfb>
-Output written on trabajo_finanzas.pdf (8 pages, 264349 bytes).
+Output written on trabajo_finanzas.pdf (8 pages, 259414 bytes).
 PDF statistics:
- 194 PDF objects out of 1000 (max. 8388607)
- 166 compressed objects within 2 object streams
- 49 named destinations out of 1000 (max. 500000)
- 176 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 195 PDF objects out of 1000 (max. 8388607)
+ 168 compressed objects within 2 object streams
+ 51 named destinations out of 1000 (max. 500000)
+ 184 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -40,12 +40,6 @@ formato <- function(x) {
 # dos puntos decimales.
 ```
 
-*En este documento se hará uso de los prefijos del sistema internacional
-de unidades (k = × 1 000; M = × 1 000 000; G = × 1 000 000 000)
-para la representación de cantidades de dinero.*
-https://en.wikipedia.org/wiki/Metric_prefix
-
-
 # Introducción
 
 En el presente informe, se hará un análisis financiero que integrará los siguientes
@@ -82,20 +76,42 @@ balance <- balance[-1, ]
 # Fuente: "investing.com".
 ```
 
-# Capital Trabajo Neto
+# Ratios Financieros
+
+## Solvencia
 
 ```{r}
-capital_trabajo_neto_2022 <- as.numeric(balance[1,
-    2]) - as.numeric(balance[21, 2])
-capital_trabajo_neto_2021 <- as.numeric(balance[1,
-    3]) - as.numeric(balance[21, 3])
-# Fórmula: capital trabajo neto = activos corrientes - pasivos corrientes.
+solvencia_2022 <- as.numeric(balance[11, 2]) / as.numeric(balance[28, 2])
+solvencia_2021 <- as.numeric(balance[11, 3]) / as.numeric(balance[28, 3])
+# Fórmula: solvencia = activos total / pasivos total.
 
-cat("El capital de trabajo neto fue de USD",
-    formato(capital_trabajo_neto_2021),
-    "M en el año 2021.\nMientras que en 2022 fue de USD",
-    formato(capital_trabajo_neto_2022), "M.\nLa diferencia es de USD",
-    formato(capital_trabajo_neto_2022 - capital_trabajo_neto_2021), "M.")
+cat("La solvenncia del año 2021 fue de",
+    formato(solvencia_2021),
+    ".\nMientras que en el año 2022 fue de",
+    formato(solvencia_2022), ".\nLa diferencia es de",
+    formato(solvencia_2022 - solvencia_2021), ".")
+```
+
+El indicador de solvencia nos muestra la capacidad que tiene una empresa de poder cumplir
+con sus obligaciones a corto y largo plazo. En el caso de Amazon, según los comandos utilizados,
+la solvencia del año 2021 fue de 1,49, mientras que en el año 2022 fue de unos 1,46. Hubo una
+reducción de un 3% en la solvencia de la empresa a lo largo de un año, sin embargo, sigue
+estando en un rango aceptable en términos generales. No se puede decir nuevamente si esto es
+algo bueno o malo, ya que no se están analizando los datos de la industria, pero se puede decir
+que la empresa si cumple con sus obligaciones en el corto y largo plazo. 
+
+## Endeudamiento
+
+```{r}
+endeudamiento_2022 <- as.numeric(balance[28, 2]) / as.numeric(balance[35, 2])
+endeudamiento_2021 <- as.numeric(balance[28, 3]) / as.numeric(balance[35, 3])
+# Fórmula: endeudamiento = pasivos total / patrimonio.
+
+cat("El endeudamiento del año 2021 fue de",
+    formato(endeudamiento_2021),
+    ".\nMientras que en el año 2022 fue de",
+    formato(endeudamiento_2022), ".\nLa diferencia es de",
+    formato(endeudamiento_2022 - endeudamiento_2021), ".")
 ```
 
 # Ratios de Liquidez
@@ -167,41 +183,6 @@ el inventario no es tan prominente como se cabría esperar de una empresa como A
 el indicador en el año 2021 es de 0,91 y en el año 2022 es de 0,72, traduciéndose en una
 disminución del 18%. Aunque es verdad que sin el inventario la empresa no podría cumplir con
 sus obligaciones en el año 2021 y mucho menos en el año 2022.
-
-# Solvencia
-
-```{r}
-solvencia_2022 <- as.numeric(balance[11, 2]) / as.numeric(balance[28, 2])
-solvencia_2021 <- as.numeric(balance[11, 3]) / as.numeric(balance[28, 3])
-# Fórmula: solvencia = activos total / pasivos total.
-
-cat("La solvenncia del año 2021 fue de",
-    formato(solvencia_2021),
-    ".\nMientras que en el año 2022 fue de",
-    formato(solvencia_2022), ".\nLa diferencia es de",
-    formato(solvencia_2022 - solvencia_2021), ".")
-```
-El indicador de solvencia nos muestra la capacidad que tiene una empresa de poder cumplir
-con sus obligaciones a corto y largo plazo. En el caso de Amazon, según los comandos utilizados,
-la solvencia del año 2021 fue de 1,49, mientras que en el año 2022 fue de unos 1,46. Hubo una
-reducción de un 3% en la solvencia de la empresa a lo largo de un año, sin embargo, sigue
-estando en un rango aceptable en términos generales. No se puede decir nuevamente si esto es
-algo bueno o malo, ya que no se están analizando los datos de la industria, pero se puede decir
-que la empresa si cumple con sus obligaciones en el corto y largo plazo. 
-
-# Endeudamiento
-
-```{r}
-endeudamiento_2022 <- as.numeric(balance[28, 2]) / as.numeric(balance[35, 2])
-endeudamiento_2021 <- as.numeric(balance[28, 3]) / as.numeric(balance[35, 3])
-# Fórmula: endeudamiento = pasivos total / patrimonio.
-
-cat("El endeudamiento del año 2021 fue de",
-    formato(endeudamiento_2021),
-    ".\nMientras que en el año 2022 fue de",
-    formato(endeudamiento_2022), ".\nLa diferencia es de",
-    formato(endeudamiento_2022 - endeudamiento_2021), ".")
-```
 
 # Ratios Económicos
 
@@ -314,6 +295,11 @@ cat("El ROI fue de",
     formato(roi_2022 * 100), "%.\nLa diferencia es de",
     formato((roi_2022 - roi_2021) * 100), "%.")
 ```
+
+# Conclusiones
+
+[AÑADIR CONCLUSIÓN]
+
 \newpage
 
 # Bibliografía
