@@ -2,6 +2,8 @@
 output: pdf_document
 fontsize: 12pt
 linestretch: 1.5
+header-includes:
+  - \usepackage[document]{ragged2e}
 ---
 
 ```{r setup, include = FALSE}
@@ -12,22 +14,22 @@ knitr::opts_chunk$set(echo = FALSE, comment = NA)
 ```{r, echo=FALSE, fig.align = "left"}
 knitr::include_graphics("logo.png")
 ```
+
 \center
 
-# Trabajo Grupal Finanzas I -- Amazon (AMZN)
+# Trabajo Grupal 1 Finanzas I -- Amazon (AMZN)
 ## 2023-04-02
 
-\flushleft
 ```{r, echo=FALSE, fig.align = "center"}
 knitr::include_graphics("coat_of_arms.png")
 ```
-
 * Amanda Araya Orrego
 * Lucas Oliva Valverde
 * Melissa Sumi Ibata
 * Exequiel Valdés Zúñiga
 
 \newpage
+\justifying
 
 ```{r, include=FALSE}
 formato <- function(x) {
@@ -41,7 +43,7 @@ formato <- function(x) {
 *En este documento se hará uso de los prefijos del sistema internacional
 de unidades (k = × 1 000; M = × 1 000 000; G = × 1 000 000 000)
 para la representación de cantidades de dinero.*
-[Hipervínculo Wikipedia.](https://en.wikipedia.org/wiki/Metric_prefix)
+https://en.wikipedia.org/wiki/Metric_prefix
 
 
 # Introducción
@@ -76,7 +78,8 @@ estado_de_resultado <- read_excel(
 balance <- read_excel("balance.xlsx",  range = "A1:C49")
 estado_de_resultado <- estado_de_resultado[-1, ]
 balance <- balance[-1, ]
-# Se extrajo los datos de los archivos. Fuente: "investing.com".
+# Se extrajo los datos de los archivos y se eliminó la fila de fecha.
+# Fuente: "investing.com".
 ```
 
 # Capital Trabajo Neto
@@ -274,7 +277,7 @@ roe_2021 <- as.numeric(estado_de_resultado[25,
 cat("El ROE fue de",
     formato(roe_2021 * 100),
     "% en el año 2021.\nMientras que en 2022 fue de",
-    formato(roe_2022 * 100), "%.\nLa diferencia es de USD",
+    formato(roe_2022 * 100), "%.\nLa diferencia es de",
     formato((roe_2022 - roe_2021) * 100), "%.")
 ```
 
@@ -292,7 +295,7 @@ roa_2021 <- as.numeric(estado_de_resultado[25,
 cat("El ROA fue de",
     formato(roa_2021 * 100),
     "% en el año 2021.\nMientras que en 2022 fue de",
-    formato(roa_2022 * 100), "%.\nLa diferencia es de USD",
+    formato(roa_2022 * 100), "%.\nLa diferencia es de",
     formato((roa_2022 - roa_2021) * 100), "%.")
 ```
 
@@ -311,3 +314,8 @@ cat("El ROI fue de",
     formato(roi_2022 * 100), "%.\nLa diferencia es de",
     formato((roi_2022 - roi_2021) * 100), "%.")
 ```
+\newpage
+
+# Bibliografía
+
+--- *Stock market quotes & financial news*. Investing.com. (s.f.). De https://www.investing.com/ 
