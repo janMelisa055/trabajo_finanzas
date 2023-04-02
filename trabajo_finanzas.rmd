@@ -47,11 +47,15 @@ En el presente informe, se hará un análisis financiero que integrará los sigu
 aspectos: análisis estático comparativo, que compara los dos últimos balances del año
 2021 al 2022 de la empresa con información proporcionada por la plataforma
 Investing.com, con el objetivo de determinar porcentualmente el peso relativo de las
-partidas. Las herramientas que se utilizaran son los ratios financieros, tales como liquidez,
+partidas.
+
+Las herramientas que se utilizaran son los ratios financieros, tales como liquidez,
 rentabilidad, endeudamiento, entre otros los cuales establecen la relación entre una
 variable y otra comportándose como un índice que se utiliza para evaluar el desempeño
 de la empresa. Cabe destacar que esta interpretación dependerá del tipo rubro de cada
 empresa y la actividad que realice.
+
+
 La empresa seleccionada es Amazon.com, la cual es reconocida mundialmente por ser uno
 de los lideres en comercialización de productos y servicios. Entre los principales son el
 comercio en línea, transmisión digital, publicidad en línea, entre otros. En los últimos
@@ -115,7 +119,12 @@ cat("El endeudamiento del año 2021 fue de",
     formato(endeudamiento_2022 - endeudamiento_2021), ".")
 ```
 
-El endeudamiento se refiere a la cantidad de deudas tiene en relación con sus ingresos o activos. En el año 2021 Amazon registró 2,04 y en 2022 fue de 2,17 teniendo una diferencia de 0,13. El endeudamiento optimo para una empresa depende de muchos factores como en la industria, sus ingresos, entorno, entre otros. Sin embargo, los datos muestran un endeudamiento mayor a la solvencia en ambos años lo que podría significar problemas para cumplir sus obligaciones de pago a medida que vencen.
+El endeudamiento se refiere a la cantidad de deudas tiene en relación con sus ingresos 
+o activos. En el año 2021 Amazon registró 2,04 y en 2022 fue de 2,17 teniendo una
+ diferencia de 0,13. El endeudamiento optimo para una empresa depende de muchos factores
+  como en la industria, sus ingresos, entorno, entre otros. Sin embargo, los datos 
+  muestran un endeudamiento mayor a la solvencia en ambos años lo que podría significar 
+  problemas para cumplir sus obligaciones de pago a medida que vencen.
 
 # Ratios de Liquidez
 
@@ -208,7 +217,14 @@ cat("El margen bruto del año 2021 fue de",
     "%.")
 ```
 
-El margen bruto es el beneficio que recibe la empresa por sus principales actividades, aunque esto es antes de empezar a descontar a base del impuesto, los intereses y gastos en términos generales. En términos simples es lo que se queda la empresa por cada dólar sobre las ventas para así cumplir con sus obligaciones y gastos que pueda tener. El margen bruto de la empresa en el año 2021 fue de un 42.03% y en el año 2022 fue de 43,81%, por lo que aumento en un 1,77%, aunque, si bien es un alto margen bruto, no se puede decir si es algo bueno o malo ya que esto es antes de poder cumplir con las obligaciones y los gastos de la empresa. 
+El margen bruto es el beneficio que recibe la empresa por sus principales actividades,
+aunque esto es antes de empezar a descontar a base del impuesto, los intereses y gastos
+en términos generales. En términos simples es lo que se queda la empresa por cada dólar
+sobre las ventas para así cumplir con sus obligaciones y gastos que pueda tener.
+El margen bruto de la empresa en el año 2021 fue de un 42.03% y en el año 2022 fue de
+43,81%, por lo que aumento en un 1,77%, aunque, si bien es un alto margen bruto, no se
+puede decir si es algo bueno o malo ya que esto es antes de poder cumplir con las
+obligaciones y los gastos de la empresa. 
 
 ## Margen Operacional
 
@@ -232,7 +248,11 @@ cat("El margen operacional del año 2021 fue de",
 
 ```
 
-El margen operacional al igual que el margen bruto es el beneficio que obtiene la empresa por sus actividades, pero con la diferencia que se calcula después del gasto general y, antes de los intereses y los impuestos. En el caso de la empresa su margen operacional fue de 5,3% en el año 2021 y 2,38 en el año 2022, por lo que se redujo en un 2,91%. Se observa una enorme reducción del margen bruto. 
+El margen operacional al igual que el margen bruto es el beneficio que obtiene la
+empresa por sus actividades, pero con la diferencia que se calcula después del gasto
+general y, antes de los intereses y los impuestos. En el caso de la empresa su margen
+operacional fue de 5,3% en el año 2021 y 2,38 en el año 2022, por lo que se redujo en
+un 2,91%. Se observa una enorme reducción del margen bruto.
 
 ## Margen Neto
 
@@ -254,7 +274,15 @@ cat("El margen neto del año 2021 fue de",
 
 ```
 
-El margen neto nuevamente es el beneficio que gana la empresa por su principal actividad, pero esta vez se descuentan todos los costos que hubo para colocar el producto en el mercado, es decir, los impuestos, intereses y los gastos. Se le considera el mejor indicador para observar los beneficios de una empresa, en este caso para Amazon su margen neto en el año 2021 fue de 7,1% y en el año 2022 fue de -0,53%, por lo que cayo un 7,63%.  Dado que el margen cayo hasta el punto de ser negativo, se puede interpretar que Amazon no esta generando beneficios suficientes para cubrir sus costos, esto podría deberse a unos altos gastos financieros y al apalancamiento de la empresa.
+El margen neto nuevamente es el beneficio que gana la empresa por su principal
+actividad, pero esta vez se descuentan todos los costos que hubo para colocar el
+producto en el mercado, es decir, los impuestos, intereses y los gastos. Se le
+considera el mejor indicador para observar los beneficios de una empresa, en este
+caso para Amazon su margen neto en el año 2021 fue de 7,1% y en el año 2022 fue de
+-0,53%, por lo que cayo un 7,63%.  Dado que el margen cayo hasta el punto de ser
+negativo, se puede interpretar que Amazon no esta generando beneficios suficientes
+para cubrir sus costos, esto podría deberse a unos altos gastos financieros y al
+apalancamiento de la empresa.
 
 ## ROE (Rendimiento Sobre el Patrimonio)
 
@@ -273,7 +301,11 @@ cat("El ROE fue de",
     formato((roe_2022 - roe_2021) * 100), "%.")
 ```
 
-El ROE mide la rentabilidad de una empresa en relación con el capital invertido. En 2021 fue de 24,13% teniendo cifras positivas para los accionistas, en cambio en 2022 tuvo una caída de -26 % llegando a  -1,86 % esto podría significar una señal de alerta para los accionistas, dado que no ha generado beneficios en relación a lo invertido. 
+El ROE mide la rentabilidad de una empresa en relación con el capital invertido.
+En 2021 fue de 24,13% teniendo cifras positivas para los accionistas, en cambio
+en 2022 tuvo una caída de -26 % llegando a  -1,86 % esto podría significar una señal
+de alerta para los accionistas, dado que no ha generado beneficios en relación a lo
+invertido.
 
 # Ratios de Rentabilidad
 
@@ -293,7 +325,11 @@ cat("El ROA fue de",
     formato((roa_2022 - roa_2021) * 100), "%.")
 ```
 
-El ROA mide la cantidad de fondos propios que una empresa ha utilizado para financiar sus activos en comparación con la cantidad de fondos prestados. En año 2021 fue de 7,93% de sus activos fueron financiados por fondos propios, en cambio en 2022 hubo un descenso significativo hasta llegar a una cifra de -0,59 % indicando que la empresa está perdiendo dinero en relación a sus activos, amenorando la rentabilidad.
+El ROA mide la cantidad de fondos propios que una empresa ha utilizado para financiar
+sus activos en comparación con la cantidad de fondos prestados. En año 2021 fue de 7,93%
+de sus activos fueron financiados por fondos propios, en cambio en 2022 hubo un descenso
+significativo hasta llegar a una cifra de -0,59 % indicando que la empresa está perdiendo
+dinero en relación a sus activos, amenorando la rentabilidad.
 
 ## ROI (Ratio de Rentabilidad de Ventas)
 
@@ -311,11 +347,27 @@ cat("El ROI fue de",
     formato((roi_2022 - roi_2021) * 100), "%.")
 ```
 
-El ROI medida de rentabilidad que indica la cantidad de ganancias que una empresa ha generado en relación con la inversión realizada. En el año 2021 fue de 24,13% teniendo cifras positivas en términos de ganancia, en cambio en 2022 tuvo una caída considerable del -26% alcanzando una cifra de -1,86 % indicando que la empresa está generando perdidas en relación con la inversión realizada.
+El ROI medida de rentabilidad que indica la cantidad de ganancias que una empresa
+ha generado en relación con la inversión realizada. En el año 2021 fue de 24,13%
+teniendo cifras positivas en términos de ganancia, en cambio en 2022 tuvo una caída
+considerable del -26% alcanzando una cifra de -1,86 % indicando que la empresa está
+generando perdidas en relación con la inversión realizada.
 
 # Conclusiones
 
-[AÑADIR CONCLUSIÓN]
+Después de analizar estos indicadores financieros en base a los datos extraídos de *investing.com*,
+se puede llegar a la conclusión de que, en 2022, Amazon ha tenido una deficiencia considerable en
+su eficacia como empresa con respecto al año 2021.
+
+Las cifras que se obtuvieron con respecto a la liquidez, endeudamiento, solvencia y prueba ácida indican poca
+capacidad empresarial para cumplir con sus obligaciones, lo cual no era el caso para el año predecesor.
+
+Los indicadores de rendimiento y rentabilidad del año 2022 indican cifras que implican pérdidas
+para la empresa, a diferencia del año anterior que indicaban un rendimiento y rentabilidad que significaban
+ganacias para Amazon y sus inversores.
+
+Por lo que, se concluye en el presente documento que, en 2022, Amazon estaba en una posición menos eficiente
+empresarialmente que lo que había estado en el año 2021.
 
 \newpage
 
