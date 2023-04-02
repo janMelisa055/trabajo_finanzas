@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.3.30)  2 APR 2023 09:49
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.3.30)  2 APR 2023 09:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -466,7 +466,7 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 375.
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [10] (./trabajo_finanzas.aux)
 Package rerunfilecheck Info: File `trabajo_finanzas.out' has not changed.
-(rerunfilecheck)             Checksum: 75F1CE52CA1E3E8340F2036718FBFA9D;3200.
+(rerunfilecheck)             Checksum: 9E7F542EB1C2BADC32EC46F6C193D0AB;3200.
  ) 
 Here is how much of TeX's memory you used:
  10888 strings out of 477985
@@ -477,7 +477,7 @@ Here is how much of TeX's memory you used:
  14 hyphenation exceptions out of 8191
  75i,5n,76p,341b,570s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/Users/oienh/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx12.pfb><c:/Users/oienh/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr12.pfb><c:/Users/oienh/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmri12.pfb><c:/Users/oienh/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmtt12.pfb>
-Output written on trabajo_finanzas.pdf (10 pages, 264425 bytes).
+Output written on trabajo_finanzas.pdf (10 pages, 264618 bytes).
 PDF statistics:
  203 PDF objects out of 1000 (max. 8388607)
  174 compressed objects within 2 object streams

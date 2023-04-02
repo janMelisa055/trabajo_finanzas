@@ -18,7 +18,7 @@ knitr::include_graphics("logo.png")
 \center
 
 # Trabajo Grupal 1 Finanzas I -- Amazon (AMZN)
-## 2023-03-25 / 2023-03-31
+## 2023-03-25 / 2023-04-02
 
 ```{r, echo=FALSE, fig.align = "center"}
 knitr::include_graphics("coat_of_arms.png")
