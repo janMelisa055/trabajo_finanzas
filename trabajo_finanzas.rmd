@@ -100,7 +100,7 @@ cat("La solvenncia del año 2021 fue de",
 El indicador de solvencia nos muestra la capacidad que tiene una empresa de poder cumplir
 con sus obligaciones a corto y largo plazo. En el caso de Amazon, según los comandos utilizados,
 la solvencia del año 2021 fue de 1,49, mientras que en el año 2022 fue de unos 1,46. Hubo una
-reducción de un 3% en la solvencia de la empresa a lo largo de un año, sin embargo, sigue
+reducción de 0,03 en la solvencia de la empresa a lo largo de un año, sin embargo, sigue
 estando en un rango aceptable en términos generales. No se puede decir nuevamente si esto es
 algo bueno o malo, ya que no se están analizando los datos de la industria, pero se puede decir
 que la empresa si cumple con sus obligaciones en el corto y largo plazo. 
@@ -145,7 +145,7 @@ Este indicador nos mostrara que por cada peso o más bien dólar en el caso de e
 cuyas finanzas están en millones de dólares, que debe la empresa a corto plazo tiene cierta
 cantidad de dólares para respaldar dichas obligaciones. Como se puede observar en los comandos
 realizados, la razón de liquidez de la empresa se redujo de 1,14 en el año 2021 a 0,94 en el
-año 2022, lo que se traduce en una disminución del 19% de un año al otro. Dado que no tenemos
+año 2022, lo que se traduce en una disminución de 0,19 de un año al otro. Dado que no tenemos
 los datos de la industria en general, no podemos saber si esta disminución se debe a un problema
 con el mercado en general o un problema en particular con la empresa de Amazon, si bien que el
 indicador sea superior a uno no significa un cumplimiento con las obligaciones, el indicador
@@ -168,7 +168,7 @@ cat("La liquidez inmediata del año 2021 fue de",
 El caso más pesimista para una crisis donde para cumplir con las obligaciones a corto plazo,
 solo se tomarán en cuenta el dinero en efectivo o equivalentes que posea la empresa para poder
 cumplir con estas. Sorpresivamente hubo un aumento en este indicador del año 2021 con un 0,25
-al año 2022 con un 0,35, es decir, un aumento del 9%. Esto significa un aumento en las cuentas
+al año 2022 con un 0,35, es decir, un aumento de 0,09. Esto significa un aumento en las cuentas
 de efectivo y equivalentes, que, si bien siguen estando lejos de lo deseado, no podemos decir
 que sea algo negativo o positivo al no tener los datos de la industria para poder compararlos.
 
@@ -193,7 +193,7 @@ más líquidos sin tener que acudir a la venta de su inventario. Al observar el 
 comandos usados, se puede observar que comparando el indicador de liquidez y el de prueba acida,
 el inventario no es tan prominente como se cabría esperar de una empresa como Amazon, dado que
 el indicador en el año 2021 es de 0,91 y en el año 2022 es de 0,72, traduciéndose en una
-disminución del 18%. Aunque es verdad que sin el inventario la empresa no podría cumplir con
+disminución de 0,18. Aunque es verdad que sin el inventario la empresa no podría cumplir con
 sus obligaciones en el año 2021 y mucho menos en el año 2022.
 
 # Ratios Económicos
