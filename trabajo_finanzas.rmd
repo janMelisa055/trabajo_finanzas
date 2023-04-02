@@ -46,7 +46,7 @@ formato <- function(x) {
 En el presente informe, se hará un análisis financiero que integrará los siguientes
 aspectos: análisis estático comparativo, que compara los dos últimos balances del año
 2021 al 2022 de la empresa con información proporcionada por la plataforma
-Investing.com, con el objetivo de determinar porcentualmente el peso relativo de las
+*Investing.com*, con el objetivo de determinar porcentualmente el peso relativo de las
 partidas.
 
 Las herramientas que se utilizaran son los ratios financieros, tales como liquidez,
