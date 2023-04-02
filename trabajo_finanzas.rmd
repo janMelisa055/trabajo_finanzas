@@ -50,10 +50,10 @@ Investing.com, con el objetivo de determinar porcentualmente el peso relativo de
 partidas. Las herramientas que se utilizaran son los ratios financieros, tales como liquidez,
 rentabilidad, endeudamiento, entre otros los cuales establecen la relación entre una
 variable y otra comportándose como un índice que se utiliza para evaluar el desempeño
-de la empresa, cabe destacar que esta interpretación dependerá del tipo rubro de cada
+de la empresa. Cabe destacar que esta interpretación dependerá del tipo rubro de cada
 empresa y la actividad que realice.
 La empresa seleccionada es Amazon.com, la cual es reconocida mundialmente por ser uno
-de los lideres en comercialización de productos y servicios, entre los principales son el
+de los lideres en comercialización de productos y servicios. Entre los principales son el
 comercio en línea, transmisión digital, publicidad en línea, entre otros. En los últimos
 años, Amazon ha experimentado crecimientos significativos en distantes áreas a nivel
 global, todo gracias a que es una empresa altamente desarrollada que ha liderado en
@@ -207,6 +207,9 @@ cat("El margen bruto del año 2021 fue de",
     formato(margen_bruto_2022 * 100 - margen_bruto_2021 * 100),
     "%.")
 ```
+
+El margen bruto es el beneficio que recibe la empresa por sus principales actividades, aunque esto es antes de empezar a descontar a base del impuesto, los intereses y gastos en términos generales. En términos simples es lo que se queda la empresa por cada dólar sobre las ventas para así cumplir con sus obligaciones y gastos que pueda tener. El margen bruto de la empresa en el año 2021 fue de un 42.03% y en el año 2022 fue de 43,81%, por lo que aumento en un 1,77%, aunque, si bien es un alto margen bruto, no se puede decir si es algo bueno o malo ya que esto es antes de poder cumplir con las obligaciones y los gastos de la empresa. 
+
 ## Margen Operacional
 
 ```{r}
@@ -228,6 +231,9 @@ cat("El margen operacional del año 2021 fue de",
     "%.")
 
 ```
+
+El margen operacional al igual que el margen bruto es el beneficio que obtiene la empresa por sus actividades, pero con la diferencia que se calcula después del gasto general y, antes de los intereses y los impuestos. En el caso de la empresa su margen operacional fue de 5,3% en el año 2021 y 2,38 en el año 2022, por lo que se redujo en un 2,91%. Se observa una enorme reducción del margen bruto. 
+
 ## Margen Neto
 
 ```{r}
@@ -247,6 +253,8 @@ cat("El margen neto del año 2021 fue de",
     formato(margen_neto_2022 * 100 - margen_neto_2021 * 100), "%.")
 
 ```
+
+El margen neto nuevamente es el beneficio que gana la empresa por su principal actividad, pero esta vez se descuentan todos los costos que hubo para colocar el producto en el mercado, es decir, los impuestos, intereses y los gastos. Se le considera el mejor indicador para observar los beneficios de una empresa, en este caso para Amazon su margen neto en el año 2021 fue de 7,1% y en el año 2022 fue de -0,53%, por lo que cayo un 7,63%.  Dado que el margen cayo hasta el punto de ser negativo, se puede interpretar que Amazon no esta generando beneficios suficientes para cubrir sus costos, esto podría deberse a unos altos gastos financieros y al apalancamiento de la empresa.
 
 ## ROE (Rendimiento Sobre el Patrimonio)
 
